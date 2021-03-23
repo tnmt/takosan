@@ -73,6 +73,7 @@ func sendNow(p Param, ch chan error) (int, string) {
 		log.Printf(fmt.Sprintf("[error] %s", message))
 		return 400, message
 	} else {
+		log.Printf(fmt.Sprintf("[debug] Message sent successfully to %s", p.Channel))
 		return 200, fmt.Sprintf("Message sent successfully to %s", p.Channel)
 	}
 }
